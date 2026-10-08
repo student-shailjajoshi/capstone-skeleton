@@ -15,17 +15,31 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav className="border-b border-gray-200 px-6 py-4">
-          <div className="mx-auto flex max-w-6xl items-center justify-between">
-            <Link href="/" className="text-xl font-bold">
+        <nav className="border-b border-gray-200 px-4 py-4 sm:px-6">
+          <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <Link
+              href="/"
+              className="text-xl font-bold"
+            >
               Capstone
             </Link>
 
-            <div className="flex gap-6">
-              <Link href="/">Home</Link>
-              <Link href="/projects">Projects</Link>
-              <Link href="/about">About</Link>
-              <Link href="/contact">Contact</Link>
+            <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm sm:text-base">
+              <Link href="/" className="hover:underline">
+                Home
+              </Link>
+
+              <Link href="/projects" className="hover:underline">
+                Projects
+              </Link>
+
+              <Link href="/about" className="hover:underline">
+                About
+              </Link>
+
+              <Link href="/contact" className="hover:underline">
+                Contact
+              </Link>
             </div>
           </div>
         </nav>

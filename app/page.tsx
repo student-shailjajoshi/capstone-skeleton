@@ -97,22 +97,22 @@ export default function Home() {
             </div>
           ))}
         </div>
-
         <form
           onSubmit={handleSubmit}
-          className="mt-10 flex gap-3"
+          className="mt-10 flex flex-col gap-3 sm:flex-row"
         >
+        
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about your project progress..."
-            className="flex-1 rounded-lg border px-4 py-3"
+            className="w-full rounded-lg border px-4 py-3"
           />
 
           <button
             type="submit"
             disabled={status === "streaming"}
-            className="rounded-lg bg-black px-5 py-3 text-white"
+            className="w-full rounded-lg bg-black px-5 py-3 text-white sm:w-auto"
           >
             Send
           </button>
